@@ -1,6 +1,8 @@
 package entities;
 
 import java.io.File;
+import java.io.FileOutputStream;
+import java.io.PrintWriter;
 import java.util.Scanner;
 
 public class Diretorios {
@@ -63,6 +65,24 @@ public class Diretorios {
 		System.out.println("Diretorio Completo: " + file.getPath());
 		System.out.println("Pasta: " + file.getParent());
 		sc.close();
+	}
+	
+	
+	//Criar um arquivo txt... delimitado por ;
+	public void criarArquivo() {
+		try {
+			FileOutputStream arquivo = new FileOutputStream("c:\\temp\\arquivo.txt");
+			PrintWriter pw = new PrintWriter(arquivo);
+			pw.println("Linha 1 Coluna 1; Linha 1 Coluna2; Linha 1 Coluna 3");
+			pw.println("Linha 2 Coluna 1; Linha 2 Coluna2; Linha 2 Coluna 3");
+			pw.println("Linha 3 Coluna 1; Linha 3 Coluna2; Linha 3 Coluna 3");
+			
+			pw.close();
+			arquivo.close();
+		}
+		catch(Exception e) {
+			System.out.println("Error");
+		}
 	}
 
 }
