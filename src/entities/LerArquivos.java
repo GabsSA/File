@@ -6,13 +6,24 @@ import java.io.IOException;
 
 public class LerArquivos {
 	
+	
+	
+	//Ler arquivos delimitados por ;
 	public void ler() {
 		
-		String path = "C:\\temp\\teste.txt";
+		String path = "C:\\temp\\arquivo.txt";
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
 			String line = br.readLine();
+			
 			while (line != null) {
-				System.out.println(line);
+				String[] palavras = line.split(";");
+				
+				
+				System.out.println("--------------------------");
+				for (String p : palavras) {
+					System.out.println("Palavra Lida: " + p);
+				}
+				
 				line = br.readLine();
 			}
 		}

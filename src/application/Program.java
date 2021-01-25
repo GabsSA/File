@@ -12,7 +12,7 @@ public class Program {
 		LerArquivos ler = new LerArquivos();
 		Diretorios diretorio = new Diretorios();
 		
-		diretorio.criarArquivo();
+		ler.ler();
 	}
 	
 	
