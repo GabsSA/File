@@ -1,5 +1,6 @@
 package application;
 
+import entities.Diretorios;
 import entities.EscreverArquivos;
 import entities.LerArquivos;
 
@@ -9,10 +10,9 @@ public class Program {
 
 		EscreverArquivos escrever = new EscreverArquivos();
 		LerArquivos ler = new LerArquivos();
+		Diretorios diretorio = new Diretorios();
 		
-		escrever.Escrever();
-
-		
+		diretorio.criarSubPasta();
 	}
 	
 	

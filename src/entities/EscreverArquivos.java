@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class EscreverArquivos {
 	
-	public void Escrever() {
+	public void escrever() {
 		String [] lines = new String[] {"TESTE", "LOUCO", "KILLER", "HAHA"};
 		
 		String path = "C:\\temp\\teste.txt";

@@ -6,7 +6,7 @@ import java.io.IOException;
 
 public class LerArquivos {
 	
-	public void Ler() {
+	public void ler() {
 		
 		String path = "C:\\temp\\teste.txt";
 		try (BufferedReader br = new BufferedReader(new FileReader(path))) {
