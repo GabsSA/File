@@ -52,5 +52,17 @@ public class Diretorios {
 		boolean sucesso = new File(strPath + "\\subdir").mkdir();
 		System.out.println("Pasta Criada !");
 	}
+	
+	public void propriedadesDoArquivo() {
+		Scanner sc = new Scanner(System.in);
+		System.out.println("Entre com o diretorio do arquivo: ");
+		String str = sc.nextLine();
+		
+		File file = new File(str);
+		System.out.println("Nome do Arquivo: " + file.getName());
+		System.out.println("Diretorio Completo: " + file.getPath());
+		System.out.println("Pasta: " + file.getParent());
+		sc.close();
+	}
 
 }
